@@ -14,7 +14,11 @@ const BottomTab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <BottomTab.Navigator initialRouteName='User'>
+      <BottomTab.Navigator initialRouteName='User'screenOptions={{
+        headerStyle: {backgroundColor: '#3c0a6b'},
+        headerTintColor: 'white',
+        tabBarActiveTintColor: '#3c0a6b',
+      }}>
         <BottomTab.Screen name='Welcome' component={WelcomeScreen} options={{
           tabBarIcon: ({color, size}) => (
             <Ionicons name='home' color={color} size={size} />
