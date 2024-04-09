@@ -11,8 +11,16 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName='User'>
-        <Drawer.Screen name='Welcome' component={WelcomeScreen} />
+      <Drawer.Navigator initialRouteName='User' screenOptions={{
+        drawerActiveBackgroundColor: '#72dc54',
+        drawerActiveTintColor: '#2343f6',
+        drawerStyle: {backgroundColor: '#3cebfa'}
+      }}>
+        <Drawer.Screen name='Welcome' component={WelcomeScreen} options={{
+          headerStyle: {backgroundColor: '#3c0a6b'},
+          headerTintColor: 'white',
+          drawerLabel: 'Welcome Screen',
+        }} />
         <Drawer.Screen name='User' component={UserScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
